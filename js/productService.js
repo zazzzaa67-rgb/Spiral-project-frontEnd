@@ -9,7 +9,7 @@ export async function getProducts(filters = {}) {
 // ===== Populate the genre dropdown =====
 
 export async function populateGenreSelect() {
-  const res = await fetch('/api/products/genres')
+  const res = await fetch('https://spiral-project.vercel.app/api/products/genres')
   const genres = await res.json() // expects an array of genres as strings: ['rock', 'pop', ...]
   const select = document.getElementById('genre-select')
 
